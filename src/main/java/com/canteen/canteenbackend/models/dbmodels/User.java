@@ -1,10 +1,12 @@
 package com.canteen.canteenbackend.models.dbmodels;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "Users")
 public class User {
     private String username;
+    @Id
     private String email;
     private String hostelName;
     private String roomNo;
